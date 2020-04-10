@@ -58,8 +58,9 @@ function render_telephones(person, telephones) {
 	html += "<table class='grid'>";
 	html += "<tr>"+
 		"<th>ID</td>"+
-		"<th>Number</th>"+
 		"<th>Type</th>"+
+		"<th>Number</th>"+
+		"<th>Email</th>"+
 		"<th></th>"+
 	"</tr>";
 	for(var i=0; i<telephones.length; i++) {
@@ -67,8 +68,9 @@ function render_telephones(person, telephones) {
 		var teltype = get_teltype(tel.teltype_id);
 		html += "<tr>"+
 			"<td>" + tel.id + "</td>" +
-			"<td>" + html_escape(tel.number) + "</td>" +
 			"<td>" + html_escape(teltype.name) + "</td>" +
+			"<td>" + html_escape(tel.number) + "</td>" +
+			"<td>" + html_escape(tel.email) + "</td>" +
 			"<td>" +
 				"<a href='#' data-person-id='" + person.id + "' data-telephone-id='" + tel.id + "' class='edit_icon telephone-edit'>Edit</a> " +
 				"<a href='#' data-person-id='" + person.id + "' data-telephone-id='" + tel.id + "' class='delete_icon telephone-delete'>Delete</a>" +
